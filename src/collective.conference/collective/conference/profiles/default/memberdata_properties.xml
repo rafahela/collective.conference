@@ -1,11 +1,24 @@
 <?xml version="1.0"?>
 <object name="portal_memberdata" meta_type="Plone Memberdata Tool">
- <property name="firstname" type="string"></property>
- <property name="lastname" type="string"></property>
- <property name="city" type="string"></property>
- <property name="country" type="string"></property>
- <property name="birthdate" type="string"></property>
- <property name="subscribe_newsletter" type="boolean"></property>
- <property name="phone" type="string"></property>
+ <property name="fullname" type="string"></property>
+ <property name="identity_document" type="string"></property>
+ <property name="issuing_body" type="string"></property>
+ <property name="cpf" type="string"></property>
  <property name="gender" type="string"></property>
+ <property name="passaport_number" type="string"></property>
+ <property name="passaport_name" type="string"></property>
+ <property name="company_name" type="string"></property>
+ <property name="company_url" type="string"></property>
+ <property name="mini_curriculum" type="string"></property>
+ <property name="need_special_care" type="string"></property>
+ <property name="student_or_APyB_affiliate" type="boolean"></property>
+ <property name="address" type="string"></property>
+ <property name="city" type="string"></property>
+ <property name="state" type="string"></property>
+ <property name="zip_code" type="string"></property>
+ <property name="country" type="string"></property>
+ <property name="citizenship" type="string"></property>
+ <property name="phone" type="string"></property>
+ <property name="cellphone" type="string"></property>
+ <property name="accept" type="boolean"></property>
 </object> 
