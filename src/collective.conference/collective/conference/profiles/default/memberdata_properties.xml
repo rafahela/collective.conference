@@ -11,6 +11,7 @@
  <property name="company_url" type="string"></property>
  <property name="mini_curriculum" type="string"></property>
  <property name="need_special_care" type="string"></property>
+ <property name="social_networks" type="string"></property>
  <property name="student_or_APyB_affiliate" type="boolean"></property>
  <property name="address" type="string"></property>
  <property name="city" type="string"></property>

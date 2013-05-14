@@ -69,6 +69,12 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
         return self.context.setMemberProperties({'need_special_care': value})
     need_special_care = property(get_need_special_care, set_need_special_care)
 
+    def get_social_networks(self):
+        return self.context.getProperty('social_networks', '')
+    def set_social_networks(self, value):
+        return self.context.setMemberProperties({'social_networks': value})
+    social_networks = property(get_social_networks, set_social_networks)
+
     def get_student_or_APyB_affiliate(self):
         return self.context.getProperty('student_or_APyB_affiliate', '')
     def set_student_or_APyB_affiliate(self, value):

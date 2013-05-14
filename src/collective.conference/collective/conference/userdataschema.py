@@ -1,14 +1,22 @@
 from zope.interface import Interface, implements
 from zope import schema
+from zope.schema.vocabulary import SimpleVocabulary
+from zope.schema.vocabulary import SimpleTerm
 
 from collective.conference import _
 from plone.app.users.userdataschema import IUserDataSchemaProvider
 from plone.app.users.userdataschema import IUserDataSchema
 
+gender_options = SimpleVocabulary(
+    [SimpleTerm(value=u'f', title=_(u'Female')),
+     SimpleTerm(value=u'm', title=_(u'Male'))])
+
+
 def validateAccept(value):
     if not value == True:
         return False
     return True
+
 
 class UserDataSchemaProvider(object):
     implements(IUserDataSchemaProvider)
@@ -17,6 +25,7 @@ class UserDataSchemaProvider(object):
         """
         """
         return IEnhancedUserDataSchema
+
 
 class IEnhancedUserDataSchema(IUserDataSchema):
     """ Use all the fields from the default user data schema, and add various
@@ -50,12 +59,9 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         title=_(u'label_gender', default=u'Gender'),
         description=_(u'help_gender',
                       default=u"Are you a girl or a boy ?"),
-        values = [
-            _(u'Male'),
-            _(u'Female'),
-            ],
+        source=gender_options,
         required=True,
-        default=u'Male',
+        default=u'm',
         )
     passaport_number = schema.TextLine(
         title=_(u'label_passaport_number', default=u'Passaport number'),
@@ -87,14 +93,17 @@ class IEnhancedUserDataSchema(IUserDataSchema):
                       default=u"A little description of yourself, if you are a instructor or panelist"),
         required=False,)
 
-    #TODO : FILE
-
     need_special_care = schema.Text(
         title=_(u'label_need_special_care', default=u'Special Care'),
         description=_(u'help_need_special_care',
                       default=u"Do you need special care ?"),
         required=False,)
-
+    social_networks = schema.TextLine(
+        title=_(u'label_social_networks', default=u'Social Networks'),
+        description=_(u'help_social_networks',
+                      default=u"Give us your Ids of Twitter, Facebook, G+, etc..."),
+        required=False,
+        )
     student_or_APyB_affiliate = schema.Bool(
         title=_(u'label_student_or_APyB_affiliate', default=u'Student or APyB affiliate'),
         description=_(u'help_student_or_APyB_affiliate',
