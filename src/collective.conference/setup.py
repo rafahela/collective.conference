@@ -26,6 +26,7 @@ setup(name='collective.conference',
       install_requires=[
           'setuptools',
           'plone.app.users',
+          'plone.app.dexterity [grok, relations]',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
