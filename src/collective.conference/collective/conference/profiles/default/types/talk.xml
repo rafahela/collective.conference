@@ -18,75 +18,12 @@
  </property>
  <property name="default_view_fallback">False</property>
  <property name="add_permission">cmf.AddPortalContent</property>
- <property name="klass">plone.dexterity.content.Item</property>
+ <property name="klass">collective.conference.content.talk.Talk</property>
  <property name="behaviors">
   <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
   <element value="plone.app.content.interfaces.INameFromTitle"/>
  </property>
- <property name="schema"></property>
- <property
-    name="model_source">&lt;model xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
-    &lt;schema&gt;
-      &lt;field name="estimated_duration" type="zope.schema.TextLine"&gt;
-        &lt;default&gt;60&lt;/default&gt;
-        &lt;description&gt;How long you want to talk (in minutes)&lt;/description&gt;
-        &lt;title&gt;Estimated duration&lt;/title&gt;
-      &lt;/field&gt;
-      &lt;field name="preferred_period" type="zope.schema.Choice"&gt;
-        &lt;default&gt;Morning&lt;/default&gt;
-        &lt;description&gt;Your preferred period of day to your talk&lt;/description&gt;
-        &lt;title&gt;Preferred period&lt;/title&gt;
-        &lt;values&gt;
-          &lt;element&gt;Morning&lt;/element&gt;
-          &lt;element&gt;Afternoon&lt;/element&gt;
-          &lt;element&gt;None&lt;/element&gt;
-        &lt;/values&gt;
-      &lt;/field&gt;
-      &lt;field name="language_talk" type="zope.schema.Choice"&gt;
-        &lt;default&gt;English&lt;/default&gt;
-        &lt;description&gt;What language do you will speak to us ?&lt;/description&gt;
-        &lt;title&gt;Language&lt;/title&gt;
-        &lt;values&gt;
-          &lt;element&gt;English&lt;/element&gt;
-          &lt;element&gt;Spanish&lt;/element&gt;
-          &lt;element&gt;Portuguese&lt;/element&gt;
-        &lt;/values&gt;
-      &lt;/field&gt;
-      &lt;field name="global_theme" type="zope.schema.Choice"&gt;
-        &lt;default&gt;Entrepreneurship&lt;/default&gt;
-        &lt;description&gt;What is the subject of your talk&lt;/description&gt;
-        &lt;title&gt;Global theme&lt;/title&gt;
-        &lt;values&gt;
-          &lt;element&gt;Entrepreneurship&lt;/element&gt;
-          &lt;element&gt;Django&lt;/element&gt;
-          &lt;element&gt;Pyramid&lt;/element&gt;
-          &lt;element&gt;Scipy&lt;/element&gt;
-          &lt;element&gt;Plone&lt;/element&gt;
-          &lt;element&gt;Web Development&lt;/element&gt;
-          &lt;element&gt;Mobility and Embedded Systems&lt;/element&gt;
-          &lt;element&gt;Enterprise and Management&lt;/element&gt;
-          &lt;element&gt;Community and Education&lt;/element&gt;
-          &lt;element&gt;Cloud, System Administration and Networks&lt;/element&gt;
-          &lt;element&gt;Media and Networks&lt;/element&gt;
-        &lt;/values&gt;
-      &lt;/field&gt;
-      &lt;field name="level" type="zope.schema.Choice"&gt;
-        &lt;default&gt;Basic&lt;/default&gt;
-        &lt;description&gt;What is the general level of your talk ?&lt;/description&gt;
-        &lt;title&gt;Level&lt;/title&gt;
-        &lt;values&gt;
-          &lt;element&gt;Basic&lt;/element&gt;
-          &lt;element&gt;Intermediate&lt;/element&gt;
-          &lt;element&gt;Advanced&lt;/element&gt;
-        &lt;/values&gt;
-      &lt;/field&gt;
-      &lt;field name="observations" type="zope.schema.Text"&gt;
-        &lt;description&gt;Do you want to give us any other information ?&lt;/description&gt;
-        &lt;required&gt;False&lt;/required&gt;
-        &lt;title&gt;Observations&lt;/title&gt;
-      &lt;/field&gt;
-    &lt;/schema&gt;
-  &lt;/model&gt;</property>
+ <property name="schema">collective.conference.content.talk.ITalk</property>
  <property name="model_file"></property>
  <alias from="(Default)" to="(dynamic view)"/>
  <alias from="edit" to="@@edit"/>
