@@ -58,7 +58,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     gender = schema.Choice(
         title=_(u'label_gender', default=u'Gender'),
         description=_(u'help_gender',
-                      default=u"Are you a girl or a boy ?"),
+                      default=u"Are you a girl or a boy?"),
         source=gender_options,
         required=True,
         default=u'm',
@@ -78,19 +78,19 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     company_name = schema.TextLine(
         title=_(u'label_company_name', default=u'Company name'),
         description=_(u'help_company_name',
-                      default=u"Where do you work ?"),
+                      default=u"Where do you work?"),
         required=False,
         )
     company_url = schema.TextLine(
         title=_(u'label_company_url', default=u'Company URL'),
         description=_(u'help_company_url',
-                      default=u"Is there an internet site of your Company ?"),
+                      default=u"Is there an internet site of your Company?"),
         required=False,
         )
     mini_curriculum = schema.Text(
         title=_(u'label_mini_curriculum', default=u'Mini Curriculum'),
         description=_(u'help_mini_curriculum',
-                      default=u"A little description of yourself, if you are a instructor or panelist"),
+                      default=u"A little description of yourself, if you are a instructor or panelist."),
         required=False,)
 
     need_special_care = schema.Text(
@@ -107,13 +107,13 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     student_or_APyB_affiliate = schema.Bool(
         title=_(u'label_student_or_APyB_affiliate', default=u'Student or APyB affiliate'),
         description=_(u'help_student_or_APyB_affiliate',
-                      default=u"Are you a student or a APyB affiliate (for discount in the fees)"),
+                      default=u"Are you a student or a APyB affiliate (for discount in the fees)."),
         required=True,
         )
     address = schema.TextLine(
         title=_(u'label_address', default=u'Address'),
         description=_(u'help_address',
-                      default=u"The address of your home"),
+                      default=u"The address of your home."),
         required=False,
         )
     city = schema.TextLine(
@@ -128,17 +128,17 @@ class IEnhancedUserDataSchema(IUserDataSchema):
                       default=u"Fill in with the state of your city."),
         required=True,
         )
-    zip_code = schema.TextLine(
-        title=_(u'label_zip_code', default=u'Zip'),
-        description=_(u'help_zip_code',
-                      default=u"The Zip code of your address"),
-        required=False,
-        )
     country = schema.TextLine(
         title=_(u'label_country', default=u'Country'),
         description=_(u'help_country',
                       default=u"Fill in the country you live in."),
         required=True,
+        )
+    zip_code = schema.TextLine(
+        title=_(u'label_zip_code', default=u'Zip'),
+        description=_(u'help_zip_code',
+                      default=u"The Zip code of your address."),
+        required=False,
         )
     citizenship = schema.TextLine(
         title=_(u'label_citizenship', default=u'Citizenship'),
@@ -149,20 +149,20 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     phone = schema.TextLine(
         title=_(u'label_phone', default=u'Telephone number'),
         description=_(u'help_phone',
-                      default=u"+CountryCode-DDD-Number"),
+                      default=u"+CountryCode-DDD-Number."),
         required=False,
         )
     cellphone = schema.TextLine(
         title=_(u'label_cellphone', default=u'Cellphone number'),
         description=_(u'help_cellphone',
-                      default=u"Leave your phone number so we can reach you. +CountryCode-DDD-Number"),
+                      default=u"Leave your phone number so we can reach you. +CountryCode-DDD-Number."),
         required=True,
         )
     accept = schema.Bool(
-        title=_(u'label_accept', default=u'Accept terms of use and the Conduct code of the event'),
+        title=_(u'label_accept', default=u'Accept terms of the Conduct code of the event'),
         description=_(u'help_accept',
                       default=u"Tick this box to indicate that you have found,"
-                      " read and accepted the terms of use for this site and the Conduct code of the event. "),
+                      " read and accepted the terms of the Conduct code of the event. http://2013.ploneconf.org/the-event/code-of-conduct"),
         required=True,
         constraint=validateAccept,
         )
