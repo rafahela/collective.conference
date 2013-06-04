@@ -5,26 +5,26 @@
   <property name="user_registration_fields" type="lines">
    <element value="fullname" />
    <element value="identity_document" />
-   <element value="issuing_body" />
+   <element value="issuing_authority" />
    <element value="cpf" />
    <element value="gender" />
    <element value="portrait" />
    <element value="passaport_number" />
    <element value="passaport_name" />
    <element value="company_name" />   
-   <element value="company_url" />
-   <element value="mini_curriculum" />   
+   <element value="company_website" />
+   <element value="mini_resume" />   
    <element value="need_special_care" />
    <element value="social_networks" />
-   <element value="student_or_APyB_affiliate" />
+   <element value="student_or_APyB_affiliated" />
    <element value="address" />
    <element value="city" />
    <element value="state" />
-   <element value="zip_code" />
    <element value="country" />
+   <element value="zip_code" />
    <element value="citizenship" />
    <element value="phone" />
-   <element value="cellphone" />
+   <element value="mobile_phone" />
    <element value="accept" />
   </property>
  </object>

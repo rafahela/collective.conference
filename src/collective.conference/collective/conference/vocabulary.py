@@ -23,6 +23,25 @@ class PeriodsVocabulary(object):
 grok.global_utility(PeriodsVocabulary,
                     name=u"collective.conference.periods")
 
+class DurationVocabulary(object):
+    grok.implements(IVocabularyFactory)
+
+    def __call__(self, context):
+        terms = []
+        levels = [('half_day', _(u'Half day')),
+                  ('one_day', _(u'1 day')),
+                  ('two_days', _(u'2 days')),
+                ]
+        for code, text in levels:
+            term = (code, code, text)
+            terms.append(SimpleVocabulary.createTerm(*term))
+
+        return SimpleVocabulary(terms)
+
+
+grok.global_utility(DurationVocabulary,
+                    name=u"collective.conference.duration")
+
 
 class LanguagesVocabulary(object):
     grok.implements(IVocabularyFactory)
@@ -30,8 +49,8 @@ class LanguagesVocabulary(object):
     def __call__(self, context):
         terms = []
         levels = [('english', _(u'English')),
-                  ('spanish', _(u'Spanish')),
                   ('portuguese', _(u'Portuguese')),
+                  ('spanish', _(u'Spanish')),
                 ]
         for code, text in levels:
             term = (code, code, text)
@@ -49,16 +68,17 @@ class ThemeVocabulary(object):
 
     def __call__(self, context):
         terms = []
-        levels = [('django', _(u'Django')),
+        levels = [('cloud_system_administration_networks', _(u'Cloud, System Administration and Networks')),
+                  ('community_education', _(u'Community and Education')),
+                  ('django', _(u'Django')),
+                  ('enterprise_management', _(u'Enterprise and Management')),
+                  ('media_networks', _(u'Media and Networks')),
+                  ('mobility_embedded_systems', _(u'Mobility and Embedded Systems')),
+                  ('plone', _(u'Plone')),
                   ('pyramid', _(u'Pyramid')),
                   ('scipy', _(u'Scipy')),
-                  ('plone', _(u'Plone')),
                   ('web_wevelopment', _(u'Web Development')),
-                  ('mobility_embedded_systems', _(u'Mobility and Embedded Systems')),
-                  ('enterprise_management', _(u'Enterprise and Management')),
-                  ('community_education', _(u'Community and Education')),
-                  ('cloud_system_administration_networks', _(u'Cloud, System Administration and Networks')),
-                  ('media_networks', _(u'Media and Networks')),
+                  ('other', _(u'Other')),
                 ]
         for code, text in levels:
             term = (code, code, text)
@@ -79,7 +99,6 @@ class LevelsVocabulary(object):
             list available languages in it '''
         terms = []
         levels = [('basic', _(u'Basic')),
-                  ('intermediate', _(u'Intermediate')),
                   ('advanced', _(u'Advanced')),
                 ]
         for code, text in levels:

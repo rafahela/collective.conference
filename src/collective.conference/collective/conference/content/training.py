@@ -11,31 +11,24 @@ class ITraining(form.Schema):
     A training in a conference
     """
 
-    estimated_duration = schema.TextLine(
-        title=_(u'Estimated duration'),
-        description=_(u'How long do you want to talk (in minutes)?'),
+    duration = schema.Choice(
+        title=_(u'Duration'),
+        description=_(u''),
         required=True,
-        default=u'120',
-    )
-
-    preferred_period = schema.Choice(
-        title=_(u"Preferred period"),
-        required=True,
-        description=_(u"Your preferred period of day to your training."),
-        vocabulary='collective.conference.periods',
+        vocabulary='collective.conference.duration',
     )
 
     language_talk = schema.Choice(
         title=_(u"Language"),
         required=True,
-        description=_(u"Language this training will be given."),
+        description=_(u"Language of your training."),
         vocabulary='collective.conference.languages',
     )
 
     infrastructure_requirements = schema.Text(
-        title=_(u"Infrastructure's requirements"),
+        title=_(u"Training requirements"),
         required=False,
-        description=_(u"What do you need to have in the classroom?"),
+        description=_(u"Which software do the student must have installed on her/his own computer?"),
     )
 
     global_theme = schema.Choice(
@@ -48,14 +41,14 @@ class ITraining(form.Schema):
     level = schema.Choice(
         title=_(u"Level"),
         required=True,
-        description=_(u"Level of this training."),
+        description=_(u"Level of your training."),
         vocabulary='collective.conference.levels',
     )
 
     observations = schema.Text(
         title=_(u"Observations"),
         required=False,
-        description=_(u"Do you want to give us any other information?"),
+        description=_(u"Do you want to give us another information?"),
     )
 
 

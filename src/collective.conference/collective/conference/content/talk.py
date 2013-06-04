@@ -11,24 +11,10 @@ class ITalk(form.Schema):
     A talk in a conference
     """
 
-    estimated_duration = schema.TextLine(
-        title=_(u'Estimated duration'),
-        description=_(u'How long do you want to talk (in minutes)?'),
-        required=True,
-        default=u'60',
-    )
-
-    preferred_period = schema.Choice(
-        title=_(u"Preferred period"),
-        required=True,
-        description=_(u"Your preferred period of day to your talk."),
-        vocabulary='collective.conference.periods',
-    )
-
     language_talk = schema.Choice(
         title=_(u"Language"),
         required=True,
-        description=_(u"Language this talk will be given."),
+        description=_(u"Language of your talk."),
         vocabulary='collective.conference.languages',
     )
 
@@ -42,14 +28,14 @@ class ITalk(form.Schema):
     level = schema.Choice(
         title=_(u"Level"),
         required=True,
-        description=_(u"Level of this talk."),
+        description=_(u"Level of your talk."),
         vocabulary='collective.conference.levels',
     )
 
     observations = schema.Text(
         title=_(u"Observations"),
         required=False,
-        description=_(u"Do you want to give us any other information?"),
+        description=_(u"Do you want to give us another information?"),
     )
 
 

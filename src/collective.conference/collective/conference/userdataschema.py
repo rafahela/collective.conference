@@ -38,15 +38,15 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         required=True,
         )
     identity_document = schema.TextLine(
-        title=_(u'label_identity_document', default=u'Identity Document'),
+        title=_(u'label_identity_document', default=u'Identity document'),
         description=_(u'help_identity_document',
                       default=u"Fill in your ID (for Brazillians only)."),
         required=False,
         )
-    issuing_body = schema.TextLine(
-        title=_(u'label_issuing body', default=u'Issuing Body'),
-        description=_(u'help_issuing body',
-                      default=u"Fill in the Issuing body of the ID (for Brazillians only)."),
+    issuing_authority = schema.TextLine(
+        title=_(u'label_issuing_authority', default=u'Issuing authority'),
+        description=_(u'help_issuing_authority',
+                      default=u"Fill in the issuing authority of the ID (for Brazillians only)."),
         required=False,
         )
     cpf = schema.TextLine(
@@ -58,7 +58,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     gender = schema.Choice(
         title=_(u'label_gender', default=u'Gender'),
         description=_(u'help_gender',
-                      default=u"Are you a girl or a boy?"),
+                      default=u""),
         source=gender_options,
         required=True,
         default=u'm',
@@ -72,7 +72,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     passaport_name = schema.TextLine(
         title=_(u'label_passaport_name', default=u'Passaport name'),
         description=_(u'help_passaport_name',
-                      default=u"Your name as wirte in your passaport (for non-Brazillians only)."),
+                      default=u"Your name as written in your passaport (for non-Brazillians only)."),
         required=False,
         )
     company_name = schema.TextLine(
@@ -81,33 +81,33 @@ class IEnhancedUserDataSchema(IUserDataSchema):
                       default=u"Where do you work?"),
         required=False,
         )
-    company_url = schema.TextLine(
-        title=_(u'label_company_url', default=u'Company URL'),
-        description=_(u'help_company_url',
-                      default=u"Is there an internet site of your Company?"),
+    company_website = schema.TextLine(
+        title=_(u'label_company_website', default=u'Company website'),
+        description=_(u'help_company_website',
+                      default=u""),
         required=False,
         )
-    mini_curriculum = schema.Text(
-        title=_(u'label_mini_curriculum', default=u'Mini Curriculum'),
-        description=_(u'help_mini_curriculum',
-                      default=u"A little description of yourself, if you are a instructor or panelist."),
-        required=False,)
-
+    mini_resume = schema.Text(
+        title=_(u'label_mini_resume', default=u'Mini resume'),
+        description=_(u'help_mini_resume',
+                      default=u""),
+        required=False,
+        )
     need_special_care = schema.Text(
-        title=_(u'label_need_special_care', default=u'Special Care'),
+        title=_(u'label_need_special_care', default=u'Special care'),
         description=_(u'help_need_special_care',
-                      default=u"Do you need special care ?"),
+                      default=u"Do you need special care?"),
         required=False,)
     social_networks = schema.TextLine(
-        title=_(u'label_social_networks', default=u'Social Networks'),
+        title=_(u'label_social_networks', default=u'Social networks'),
         description=_(u'help_social_networks',
-                      default=u"Give us your Ids of Twitter, Facebook, G+, etc..."),
+                      default=u"Give us your Twitter, Facebook, G+... ids."),
         required=False,
         )
-    student_or_APyB_affiliate = schema.Bool(
-        title=_(u'label_student_or_APyB_affiliate', default=u'Student or APyB affiliate'),
-        description=_(u'help_student_or_APyB_affiliate',
-                      default=u"Are you a student or a APyB affiliate (for discount in the fees)."),
+    student_or_APyB_affiliated = schema.Bool(
+        title=_(u'label_student_or_APyB_affiliated', default=u'Student or APyB affiliated'),
+        description=_(u'help_student_or_APyB_affiliated',
+                      default=u"Check this box if you are a student or an APyB affiliated (for lower prices in the fees)."),
         required=True,
         )
     address = schema.TextLine(
@@ -125,7 +125,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     state = schema.TextLine(
         title=_(u'label_state', default=u'State'),
         description=_(u'help_state',
-                      default=u"Fill in with the state of your city."),
+                      default=u"Fill in the state of your city."),
         required=True,
         )
     country = schema.TextLine(
@@ -137,32 +137,32 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     zip_code = schema.TextLine(
         title=_(u'label_zip_code', default=u'Zip'),
         description=_(u'help_zip_code',
-                      default=u"The Zip code of your address."),
+                      default=u"The zip code of your address."),
         required=False,
         )
     citizenship = schema.TextLine(
         title=_(u'label_citizenship', default=u'Citizenship'),
         description=_(u'help_citizenship',
-                      default=u"Fill in with your citizenship."),
+                      default=u"Fill in your citizenship."),
         required=True,
         )
     phone = schema.TextLine(
         title=_(u'label_phone', default=u'Telephone number'),
         description=_(u'help_phone',
-                      default=u"+CountryCode-DDD-Number."),
+                      default=u"Inform your telephone number (+xx-xxx-xxxx-xxxx)."),
         required=False,
         )
-    cellphone = schema.TextLine(
-        title=_(u'label_cellphone', default=u'Cellphone number'),
-        description=_(u'help_cellphone',
-                      default=u"Leave your phone number so we can reach you. +CountryCode-DDD-Number."),
+    mobile_phone = schema.TextLine(
+        title=_(u'label_mobile_phone', default=u'Mobile phone'),
+        description=_(u'help_mobile_phone',
+                      default=u"Inform your mobile phone number in case we need to contact you (+xx-xxx-xxxx-xxxx)."),
         required=True,
         )
     accept = schema.Bool(
-        title=_(u'label_accept', default=u'Accept terms of the Conduct code of the event'),
+        title=_(u'label_accept', default=u'I accept the terms of the event conduct code.'),
         description=_(u'help_accept',
-                      default=u"Tick this box to indicate that you have found,"
-                      " read and accepted the terms of the Conduct code of the event. http://2013.ploneconf.org/the-event/code-of-conduct"),
+                      default=u"Check this box if you have found,"
+                      " read and accepted the terms of the event conduct code. http://2013.ploneconf.org/the-event/code-of-conduct"),
         required=True,
         constraint=validateAccept,
         )

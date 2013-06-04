@@ -18,6 +18,10 @@ msgstr ""
 msgid "Talk"
 msgstr "Palestra"
 
+#: collective/conference/profiles/default/types/training.xml
+msgid "Training"
+msgstr "Treinamento"
+
 #: collective/conference/userdataschema.py
 msgid "Male"
 msgstr "Masculino"
@@ -36,18 +40,18 @@ msgstr "Informe seu nome completo. Ex: João da Silva."
 
 #: collective/conference/userdataschema.py
 msgid "label_identity_document"
-msgstr "Documeto de identidade"
+msgstr "Documento de identidade"
 
 #: collective/conference/userdataschema.py
 msgid "help_identity_document"
 msgstr "Informe o número do seu documento de identidade (somente para brasileiros)."
 
 #: collective/conference/userdataschema.py
-msgid "label_issuing body"
+msgid "label_issuing_authority"
 msgstr "Órgão expeditor"
 
 #: collective/conference/userdataschema.py
-msgid "help_issuing body"
+msgid "help_issuing_authority"
 msgstr "Informe o órgão expeditor do documento de identidade (somente para brasileiros)."
 
 #: collective/conference/userdataschema.py
@@ -64,7 +68,7 @@ msgstr "Sexo"
 
 #: collective/conference/userdataschema.py
 msgid "help_gender"
-msgstr "Você é uma menina ou um menino?"
+msgstr ""
 
 #: collective/conference/userdataschema.py
 msgid "label_passaport_number"
@@ -72,7 +76,7 @@ msgstr "Número do passaporte"
 
 #: collective/conference/userdataschema.py
 msgid "help_passaport_number"
-msgstr "Informe o número do seu passaporte (Somente para estrangeiros)."
+msgstr "Informe o número do seu passaporte (somente para estrangeiros)."
 
 #: collective/conference/userdataschema.py
 msgid "label_passaport_name"
@@ -91,20 +95,20 @@ msgid "help_company_name"
 msgstr "Onde você trabalha?"
 
 #: collective/conference/userdataschema.py
-msgid "label_company_url"
-msgstr "Endereço da empresa"
+msgid "label_company_website"
+msgstr "Site da empresa"
 
 #: collective/conference/userdataschema.py
-msgid "help_company_url"
-msgstr "Informe o site da sua empresa."
+msgid "help_company_website"
+msgstr ""
 
 #: collective/conference/userdataschema.py
-msgid "label_mini_curriculum"
+msgid "label_mini_resume"
 msgstr "Mini curriculum"
 
 #: collective/conference/userdataschema.py
-msgid "help_mini_curriculum"
-msgstr "Uma breve descrição, se você for instrutor ou palestrante."
+msgid "help_mini_resume"
+msgstr ""
 
 #: collective/conference/userdataschema.py
 msgid "label_need_special_care"
@@ -123,11 +127,11 @@ msgid "help_social_networks"
 msgstr "Informe seus id's do Twitter, Facebook, G+, etc..."
 
 #: collective/conference/userdataschema.py
-msgid "label_student_or_APyB_affiliate"
+msgid "label_student_or_APyB_affiliated"
 msgstr "Estudante ou associado da APyB"
 
 #: collective/conference/userdataschema.py
-msgid "help_student_or_APyB_affiliate"
+msgid "help_student_or_APyB_affiliated"
 msgstr "Selecione, se você é estudante ou associado da APyB (para obter descontos na inscrição)."
 
 #: collective/conference/userdataschema.py
@@ -187,43 +191,24 @@ msgid "help_phone"
 msgstr "Informe o número de telefone no formato +xx-xxx-xxxx-xxxx."
 
 #: collective/conference/userdataschema.py
-msgid "label_cellphone"
+msgid "label_mobile_phone"
 msgstr "Celular"
 
 #: collective/conference/userdataschema.py
-msgid "help_cellphone"
+msgid "help_mobile_phone"
 msgstr "Informe um número de celular que possamos contatá-lo, no formato +xx-xxx-xxxx-xxxx."
 
 #: collective/conference/userdataschema.py
 msgid "label_accept"
-msgstr "Aceito os termos do código de conduta do evento"
+msgstr "Aceito os termos do código de conduta do evento."
 
 #: collective/conference/userdataschema.py
 msgid "help_accept"
 msgstr 'Marque esta caixa para indicar que você encontrou, leu e aceitou os termos do Código de Coduta do evento. <a href="http://2013.ploneconf.org/the-event/code-of-conduct">http://2013.ploneconf.org/the-event/code-of-conduct</a>'
 
-#: collective/conference/content/talk.py
 #: collective/conference/content/training.py
-msgid "Estimated duration"
-msgstr "Duração estimada"
-
-#: collective/conference/content/talk.py
-#: collective/conference/content/training.py
-msgid "How long do you want to talk (in minutes)"
-msgstr "Por quanto tempo você quer falar (em minutos)?"
-
-#: collective/conference/content/talk.py
-#: collective/conference/content/training.py
-msgid "Preferred period"
-msgstr "Período"
-
-#: collective/conference/content/talk.py
-msgid "Your preferred period of day to your talk."
-msgstr "O período do dia que você prefere dar sua palestra."
-
-#: collective/conference/content/training.py
-msgid "Your preferred period of day to your training"
-msgstr "O período do dia que você prefere dar seu treinamento."
+msgid "Duration"
+msgstr "Duração"
 
 #: collective/conference/content/talk.py
 #: collective/conference/content/training.py
@@ -231,12 +216,12 @@ msgid "Language"
 msgstr "Língua"
 
 #: collective/conference/content/talk.py
-msgid "Language this talk will be given."
-msgstr "Em que língua a palestra será dada."
+msgid "Language of your talk."
+msgstr "Em que língua sua palestra será dada."
 
 #: collective/conference/content/training.py
-msgid "Language this training will be given."
-msgstr "Em que língua este treinamento será dado."
+msgid "Language of your training."
+msgstr "Em que língua seu treinamento será dado."
 
 #: collective/conference/content/talk.py
 #: collective/conference/content/training.py
@@ -245,11 +230,11 @@ msgstr "Tema"
 
 #: collective/conference/content/talk.py
 msgid "What is the subject of your talk?"
-msgstr "Qual é o assunto da sua palestra?"
+msgstr "Qual é o macro tema da sua palestra?"
 
 #: collective/conference/content/training.py
 msgid "What is the subject of your training?"
-msgstr "Qual é o assunto do seu treinamento?"
+msgstr "Qual é o macro tema do seu treinamento?"
 
 #: collective/conference/content/talk.py
 #: collective/conference/content/training.py
@@ -257,11 +242,11 @@ msgid "Level"
 msgstr "Nível"
 
 #: collective/conference/content/talk.py
-msgid "Level of this talk."
+msgid "Level of your talk."
 msgstr "Nível da sua palestra."
 
 #: collective/conference/content/training.py
-msgid "Level of this training."
+msgid "Level of your training."
 msgstr "Nível do seu treinamento."
 
 #: collective/conference/content/talk.py
@@ -269,16 +254,29 @@ msgid "Observations"
 msgstr "Observações"
 
 #: collective/conference/content/talk.py
-msgid "Do you want to give us any other information?"
+#: collective/conference/content/training.py
+msgid "Do you want to give us another information?"
 msgstr "Você quer nos dar mais alguma informação?"
 
 #: collective/conference/content/training.py
-msgid "Infrastructure's requirements"
-msgstr "Requisitos de infraestrutura"
+msgid "Training requirements"
+msgstr "Pré requisitos do treinamento"
 
 #: collective/conference/content/training.py
-msgid "What do you need to have in the classroom?"
-msgstr "O que você precisa que tenha na sala de treinamento?"
+msgid "Which software do the student must have installed on her/his own computer?"
+msgstr "O que você precisa que o aluno tenha instalado em sua máquina?"
+
+#: collective/conference/vocabularies.py
+msgid "Half day"
+msgstr "Meio dia"
+
+#: collective/conference/vocabularies.py
+msgid "1 day"
+msgstr "1 dia"
+
+#: collective/conference/vocabularies.py
+msgid "2 days"
+msgstr "2 dias"
 
 #: collective/conference/vocabularies.py
 msgid "Morning"
@@ -327,10 +325,6 @@ msgstr "Multimídia e Redes"
 #: collective/conference/vocabularies.py
 msgid "Basic"
 msgstr "Básico"
-
-#: collective/conference/vocabularies.py
-msgid "Intermediate"
-msgstr "Intermediário"
 
 #: collective/conference/vocabularies.py
 msgid "Advanced"
