@@ -329,3 +329,15 @@ msgstr "Básico"
 #: collective/conference/vocabularies.py
 msgid "Advanced"
 msgstr "Avançado"
+
+msgid "Submit your Talk/Training"
+msgstr "Envie sua Palestra/Treinamento"
+
+msgid "Submit your talk"
+msgstr "Envie sua palestra"
+
+msgid "Submit your training"
+msgstr "Envie seu treinamento"
+
+msgid "Change your informations"
+msgstr "Altere seu cadastro"
